@@ -1,0 +1,42 @@
+# Python virtual environment
+probability_env/
+venv/
+env/
+ENV/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Generated images
+*.png
+!examples/README.md
+
+# Ignore large generated data files in data folder
+data/**/*.csv
+data/**/*.json
+data/**/*.parquet
+data/**/*.xlsx
+data/**/*.xls
+data/**/*.txt
+data/**/*.tsv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
