@@ -1,0 +1,17 @@
+# Core scientific computing
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+
+# PyTorch for neural network demonstrations
+torch>=2.0.0
+
+# Ollama Python client for LLM experiments
+ollama>=0.1.0
+
+# Optional: For advanced visualizations
+seaborn>=0.12.0
+
+# Optional: For Jupyter notebooks
+# jupyter>=1.0.0
+# ipykernel>=6.0.0
