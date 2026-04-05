@@ -360,21 +360,21 @@ All examples use:
 
 ## Key Takeaways
 
-✅ **Hypothesis testing** provides a formal framework for making data-driven decisions
+ **Hypothesis testing** provides a formal framework for making data-driven decisions
 
-✅ **Statistical inference** enables conclusions about populations based on sample data
+ **Statistical inference** enables conclusions about populations based on sample data
 
-✅ **Type I and Type II errors** must be balanced based on problem context
+ **Type I and Type II errors** must be balanced based on problem context
 
-✅ **Confidence intervals** quantify uncertainty in parameter estimates
+ **Confidence intervals** quantify uncertainty in parameter estimates
 
-✅ **Machine learning** extensively uses hypothesis testing for model selection, feature selection, A/B testing, and validation
+ **Machine learning** uses hypothesis testing for model selection, feature selection, A/B testing, and validation
 
-✅ **p-values** must be interpreted correctly: they measure evidence against $H_0$, not the probability that $H_0$ is true
+ **p-values** must be interpreted correctly: they measure evidence against $H_0$, not the probability that $H_0$ is true
 
-✅ **Cross-validation** provides robust performance estimates for comparing models
+ **Cross-validation** provides robust performance estimates for comparing models
 
-✅ **McNemar's test** is particularly valuable for comparing models on a single test set without expensive retraining
+ **McNemar's test** is particularly valuable for comparing models on a single test set without expensive retraining
 
 ---
 
