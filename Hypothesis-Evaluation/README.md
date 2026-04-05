@@ -1,4 +1,4 @@
-# Hypothesis and Inference in Data Analysis
+# Hypothesis evaluation and model selection
 
 ## Overview
 
