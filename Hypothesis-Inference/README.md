@@ -358,7 +358,7 @@ All examples use:
 
 ---
 
-## Key Takeaways
+## Conclusions
 
  **Hypothesis testing** provides a formal framework for making data-driven decisions
 
