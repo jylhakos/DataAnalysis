@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+llm_env/
+.venv
+
+# PyTorch
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+runs/
+lightning_logs/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data
+data/
+datasets/
+*.csv
+*.json
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+
+# Logs
+logs/
+*.log
+
+# Model weights and outputs
+models/
+outputs/
+results/
+wandb/
+
+# Environment variables
+.env
+.env.local
+
+# OS
+Thumbs.db
+.DS_Store
+*.bak

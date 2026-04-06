@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f9f9f9"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">
+    Transformer Architecture
+  </text>
+  
+  <!-- Encoder (Left Side) -->
+  <g id="encoder">
+    <!-- Encoder Box -->
+    <rect x="50" y="80" width="300" height="480" fill="#e3f2fd" stroke="#1976d2" stroke-width="3" rx="10"/>
+    <text x="200" y="110" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#1976d2">
+      Encoder
+    </text>
+    
+    <!-- Input Embedding -->
+    <rect x="80" y="460" width="240" height="60" fill="#fff" stroke="#1976d2" stroke-width="2" rx="5"/>
+    <text x="200" y="495" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">
+      Input Embedding
+    </text>
+    <text x="200" y="510" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+      + Positional Encoding
+    </text>
+    
+    <!-- Encoder Layers -->
+    <g id="encoder-layer-n">
+      <rect x="80" y="140" width="240" height="120" fill="#fff" stroke="#1976d2" stroke-width="2" rx="5"/>
+      <text x="200" y="165" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">
+        Encoder Layer (× N)
+      </text>
+      
+      <!-- Multi-Head Attention -->
+      <rect x="100" y="180" width="200" height="35" fill="#bbdefb" stroke="#1976d2" stroke-width="1" rx="3"/>
+      <text x="200" y="202" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">
+        Multi-Head Self-Attention
+      </text>
+      
+      <!-- Add & Norm -->
+      <rect x="100" y="280" width="200" height="60" fill="#90caf9" stroke="#1976d2" stroke-width="1" rx="3"/>
+      <text x="200" y="305" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">
+        Feed Forward Network
+      </text>
+      <text x="200" y="323" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#555">
+        (Add & Norm)
+      </text>
+    </g>
+    
+    <!-- Arrow from input to encoder -->
+    <path d="M 200 460 L 200 270" stroke="#1976d2" stroke-width="2" fill="none" marker-end="url(#arrowblue)"/>
+  </g>
+  
+  <!-- Decoder (Right Side) -->
+  <g id="decoder">
+    <!-- Decoder Box -->
+    <rect x="450" y="80" width="300" height="480" fill="#fff3e0" stroke="#f57c00" stroke-width="3" rx="10"/>
+    <text x="600" y="110" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#f57c00">
+      Decoder
+    </text>
+    
+    <!-- Output Embedding -->
+    <rect x="480" y="460" width="240" height="60" fill="#fff" stroke="#f57c00" stroke-width="2" rx="5"/>
+    <text x="600" y="495" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">
+      Output Embedding
+    </text>
+    <text x="600" y="510" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+      + Positional Encoding
+    </text>
+    
+    <!-- Decoder Layers -->
+    <g id="decoder-layer-n">
+      <rect x="480" y="140" width="240" height="180" fill="#fff" stroke="#f57c00" stroke-width="2" rx="5"/>
+      <text x="600" y="165" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">
+        Decoder Layer (× N)
+      </text>
+      
+      <!-- Masked Multi-Head Attention -->
+      <rect x="500" y="180" width="200" height="35" fill="#ffe0b2" stroke="#f57c00" stroke-width="1" rx="3"/>
+      <text x="600" y="202" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#333">
+        Masked Multi-Head Attention
+      </text>
+      
+      <!-- Cross Attention -->
+      <rect x="500" y="225" width="200" height="35" fill="#ffcc80" stroke="#f57c00" stroke-width="1" rx="3"/>
+      <text x="600" y="247" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#333">
+        Encoder-Decoder Attention
+      </text>
+      
+      <!-- Feed Forward -->
+      <rect x="500" y="270" width="200" height="35" fill="#ffab40" stroke="#f57c00" stroke-width="1" rx="3"/>
+      <text x="600" y="292" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#333">
+        Feed Forward (Add & Norm)
+      </text>
+    </g>
+    
+    <!-- Linear & Softmax -->
+    <rect x="480" y="340" width="240" height="60" fill="#fff" stroke="#f57c00" stroke-width="2" rx="5"/>
+    <text x="600" y="365" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">
+      Linear & Softmax
+    </text>
+    <text x="600" y="383" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+      Output Probabilities
+    </text>
+    
+    <!-- Arrow from output to decoder -->
+    <path d="M 600 460 L 600 320" stroke="#f57c00" stroke-width="2" fill="none" marker-end="url(#arroworange)"/>
+    
+    <!-- Arrow from decoder top to output -->
+    <path d="M 600 140 L 600 100" stroke="#f57c00" stroke-width="2" fill="none" marker-end="url(#arroworange)"/>
+  </g>
+  
+  <!-- Connection from Encoder to Decoder -->
+  <path d="M 350 200 L 480 235" stroke="#666" stroke-width="2" stroke-dasharray="5,5" fill="none" marker-end="url(#arrowgray)"/>
+  <text x="395" y="210" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#666">
+    Keys & Values
+  </text>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1976d2"/>
+    </marker>
+    <marker id="arroworange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f57c00"/>
+    </marker>
+    <marker id="arrowgray" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#666"/>
+    </marker>
+  </defs>
+</svg>
