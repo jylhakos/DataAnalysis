@@ -271,7 +271,7 @@ Typical values: $c \in [0.5, 5.0]$, with 1.0 being common for LLMs.
 Transformers were first introduced in the seminal paper "Attention is All You Need" by Vaswani et al. in 2017. Unlike earlier neural network architectures that processed text sequentially (like RNNs and LSTMs), transformers process entire sequences simultaneously through self-attention mechanisms. This parallel processing capability has made transformers the dominant architecture for modern LLMs.
 
 <p align="center">
-  <img src="transformers.svg" alt="Transformer Architecture" width="800">
+  <img src="transformers.png" alt="Transformer Architecture" width="800">
 </p>
 
 *The standard architecture for a Transformer model with the encoder shown on the left and a decoder shown on the right.*
