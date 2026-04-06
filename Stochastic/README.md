@@ -8,7 +8,7 @@ A study of deterministic and Stochastic approaches in machine learning, with a f
 - [Deterministic vs. Stochastic in Machine Learning](#deterministic-vs-stochastic-in-machine-learning)
 - [Stochastic Mathematics is Deterministic in ML](#stochastic-mathematics-is-deterministic-in-ml)
 - [Mathematical Foundations](#mathematical-foundations)
-- [Stochastic Features in Large Language Models](#stochastic-features-in-large-language-models)
+- [Probabilistic Text Generation in LLMs](#probabilistic-text-generation-in-llms)
 - [Why LLMs Produce Non-Deterministic Outputs](#why-llms-produce-non-deterministic-outputs)
 - [Temperature 0: Myth vs. Reality](#temperature-0-myth-vs-reality)
 - [Differences Between Stochastic and Deterministic Sampling](#differences-between-stochastic-and-deterministic-sampling)
@@ -153,7 +153,7 @@ $$H(P) = -\sum_{i=1}^{|V|} P(w_i) \log P(w_i)$$
 
 ---
 
-## Stochastic Features in Large Language Models
+## Probabilistic Text Generation in LLMs
 
 Large language models are fundamentally **probabilistic systems**, not calculators. While the underlying neural network computes mathematical probabilities, generation involves sampling from these distributions using parameters like **temperature** and **top-p**, intentionally adding randomness to produce more creative, human-like text rather than repetitive answers.
 
