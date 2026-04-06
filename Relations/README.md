@@ -316,10 +316,10 @@ Choosing the right similarity metric is critical for effective search:
 
 | Metric | Formula | Best Use Case | Range |
 |--------|---------|---------------|-------|
-| **Cosine Similarity** | `1 - (A · B) / (||A|| ||B||)` | Text and semantic similarity | 0 to 2 (distance) |
-| **Euclidean Distance (L2)** | `sqrt(Σ(Ai - Bi)²)` | Geometric or spatial data | 0 to ∞ |
-| **Dot Product** | `Σ(Ai × Bi)` | Deep learning models, magnitude matters | -∞ to ∞ |
-| **Manhattan Distance (L1)** | `Σ|Ai - Bi|` | High-dimensional sparse data | 0 to ∞ |
+| **Cosine Similarity** | $(A \cdot B) / (\|A\| \|B\|)$ | Text and semantic similarity | -1 to 1 |
+| **Euclidean Distance (L2)** | $\sqrt{\sum_{i}(A_i - B_i)^2}$ | Geometric or spatial data | 0 to ∞ |
+| **Dot Product** | $A \cdot B = \sum_{i}(A_i \cdot B_i)$ | Deep learning models, magnitude matters | -∞ to ∞ |
+| **Manhattan Distance (L1)** | $\sum_{i}\|A_i - B_i\|$ | High-dimensional sparse data | 0 to ∞ |
 
 **Selection Guidelines:**
 
