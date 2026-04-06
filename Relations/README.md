@@ -199,7 +199,7 @@ You take your domain-specific dataset (the right side of the preceding figure, d
 The flow for a retrieval augmented generation system follows these steps:
 
 1. **Prompt**: A user generates a natural language query
-   - Example: "What are the side effects of sertraline?"
+   - Example: "What's the weather like?"
 
 2. **Embedding Model**: The prompt is converted into vectors
    - Use models like OpenAI's `text-embedding-3-small` or Amazon Titan Text Embedding v2
