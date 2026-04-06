@@ -1,0 +1,1 @@
+Embeddings are numerical representations of data that capture semantic meaning. Text, images, and other content are converted into high-dimensional vectors where similar items are positioned close together in vector space. Common embedding models include Sentence-BERT, OpenAI's text-embedding-ada-002, and various multimodal models.

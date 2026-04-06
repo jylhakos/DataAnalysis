@@ -1,0 +1,1 @@
+Retrieval Augmented Generation (RAG) enhances LLM responses by retrieving relevant information from external sources. The process involves: 1) User query 2) Query embedding generation 3) Vector similarity search 4) Context retrieval 5) Prompt augmentation 6) LLM generation. This reduces hallucinations and provides up-to-date information beyond the model's training data.

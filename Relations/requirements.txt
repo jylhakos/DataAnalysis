@@ -1,0 +1,29 @@
+# Core dependencies
+langchain==0.1.16
+langchain-community==0.0.34
+langchain-core==0.1.45
+
+# Database
+psycopg2-binary==2.9.9
+pgvector==0.2.5
+
+# Embeddings
+sentence-transformers==2.6.1
+transformers==4.40.0
+torch==2.2.2
+
+# LLM
+ollama==0.1.8
+
+# Web framework
+flask==3.0.3
+flask-cors==4.0.0
+
+# Utilities
+python-dotenv==1.0.1
+requests==2.31.0
+numpy==1.26.4
+pandas==2.2.2
+
+# Optional: Alternative vector stores
+chromadb==0.4.24

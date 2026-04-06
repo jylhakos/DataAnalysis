@@ -1,0 +1,1 @@
+PostgreSQL with the pgvector extension provides native vector search capabilities within a traditional relational database. This allows storing structured data and vector embeddings together, enabling hybrid queries that combine SQL filtering with semantic similarity search. It's ideal for applications needing both transactional integrity and vector operations.

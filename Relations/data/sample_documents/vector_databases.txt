@@ -1,0 +1,1 @@
+Vector databases are specialized systems designed to store and query high-dimensional vector embeddings efficiently. They enable semantic search, where similar items are found based on meaning rather than exact keyword matches. Common algorithms include HNSW (Hierarchical Navigable Small World) and IVF (Inverted File Index).
