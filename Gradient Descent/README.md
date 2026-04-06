@@ -324,6 +324,39 @@ Modern LLMs often use decoder-only transformers (like GPT) rather than the full 
 - **Encoder-only models (BERT):** Focus on understanding and classification
 - **Encoder-decoder models (T5, BART):** Best for translation and summarization
 
+## Tokenization in LLMs
+
+### What Is Tokenization?
+
+Tokenization in large language models (LLMs) is the process of breaking down raw text into smaller units called tokens—words, subwords, or characters—which are then converted into numerical IDs for model processing. This is a critical first step that directly affects the model's understanding of language.
+
+**Reference:** [NVIDIA Blog - AI Tokens Explained](https://blogs.nvidia.com/blog/ai-tokens-explained/)
+
+### Tokenization Algorithms
+
+**Byte Pair Encoding (BPE):** Iteratively merges the most frequent pairs of characters or subwords. This algorithm is used by GPT models and balances vocabulary size with representation efficiency.
+
+**WordPiece:** Used in BERT, it focuses on maximizing the likelihood of the training data when merging subword units, creating a vocabulary that optimizes for common patterns.
+
+**SentencePiece:** Treats text as a sequence of bytes, handling spaces as characters, which allows for language-agnostic tokenization. This approach is particularly useful for multilingual models.
+
+### The Tokenization Process
+
+1. **Normalization:** Text is preprocessed (e.g., converted to lowercase, Unicode normalization)
+2. **Token Splitting:** Text is split into tokens based on the learned vocabulary
+3. **Token Mapping:** Each token is mapped to a unique numerical identifier (Token ID)
+4. **Encoding:** The sequence of Token IDs is fed into the model
+
+Efficient tokenization directly impacts:
+- Model vocabulary size and memory footprint
+- Training and inference speed
+- The model's ability to handle rare words and multilingual text
+- Out-of-vocabulary word handling
+
+**Additional Resources:**
+- [Hugging Face LLM Course - Tokenization](https://huggingface.co/learn/llm-course/en/chapter2/4)
+- [Microsoft Learn - Understanding Tokens](https://learn.microsoft.com/en-us/dotnet/ai/conceptual/understanding-tokens)
+
 ## Attention Mechanisms and Transformers
 
 ### Scaled Dot-Product Attention
@@ -340,6 +373,8 @@ where:
 
 ### Multi-Head Attention
 
+Multi-Head Attention (MHA) is the foundational attention mechanism used in Transformer-based LLMs to allow the model to simultaneously focus on different parts of an input sequence, capturing diverse syntactic and semantic relationships. During training, MHA projects Query (Q), Key (K), and Value (V) matrices into multiple "heads," which are calculated in parallel to enhance model expressivity.
+
 Projects Q, K, V multiple times with different learned projections:
 
 $$\text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \ldots, \text{head}_h)W^O$$
@@ -349,6 +384,73 @@ where each head is:
 $$\text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)$$
 
 **Purpose:** Allows the model to attend to information from different representation subspaces.
+
+#### MHA in Training
+
+**Parallel Processing:** MHA splits input embeddings into multiple heads ($h$), enabling each head to learn different aspects of the language simultaneously, improving the model's ability to capture complex dependencies.
+
+**Enhanced Representation:** By averaging or combining multiple attention heads, MHA reduces noise and instability from individual heads, resulting in more stable and high-performance training compared to single-head mechanisms.
+
+#### Efficient MHA Variants
+
+Due to MHA's high memory usage, training modern large-scale models often involves efficiency-focused alternatives:
+
+**Grouped Query Attention (GQA):** Groups query heads together to share Key and Value heads, balancing the performance of MHA with faster training speed. Used in models like Llama 2 and Mistral.
+
+**Multi-Query Attention (MQA):** Shares a single Key and Value head across all query heads, providing maximum speed but with potential accuracy tradeoffs.
+
+**Multi-Head Latent Attention (MLA):** A newer approach that uses low-rank projection to compress the KV cache, often outperforming MHA in efficiency while maintaining performance.
+
+While MHA is the standard, variants like GQA have become more common in large-scale training to handle the massive memory requirements of long context lengths.
+
+### Attention Types in LLM Training
+
+Attention mechanisms in Large Language Models (LLMs) are used during training to dynamically weigh the importance of different tokens in a sequence, enabling models to understand context, long-range dependencies, and semantic relationships. Through query, key, and value vectors, attention maps input data to relevant context.
+
+**Reference:** [Visual Attention Variants - Sebastian Raschka](https://magazine.sebastianraschka.com/p/visual-attention-variants)
+
+**Self-Attention:** Allows the model to relate each word in a sequence to other words in the same sequence, identifying dependencies regardless of distance. This enables the model to understand that "it" in "The cat sat on the mat because it was tired" refers to "cat."
+
+**Multi-Head Attention:** Employs multiple, parallel attention mechanisms (heads) to focus on different aspects of the input simultaneously, capturing diverse relationships (e.g., syntactic structure, semantic meaning, positional information).
+
+**Causal/Masked Attention:** Crucial for autoregressive models (e.g., GPT), this type masks future tokens, ensuring the model only attends to past and present tokens during training. This is essential for text generation where each token is predicted based only on preceding context.
+
+#### How Chatbots Decide What to Pay Attention To
+
+In conversational AI, transformer-based chatbots use attention mechanisms to dynamically identify which parts of the conversation history are most relevant to generating the next response. The model:
+
+1. **Contextual Relevance:** Computes attention scores between the current query and all previous tokens in the conversation
+2. **Position Awareness:** Uses positional encodings to understand temporal ordering of messages
+3. **Semantic Weighting:** Assigns higher weights to tokens that are semantically related to the current context
+4. **Multi-scale Context:** Different attention heads may focus on immediate context (last message) vs. broader conversation history
+
+**Reference:** [Understanding Attention in Large Language Models - University of Michigan](https://news.engin.umich.edu/2023/12/understanding-attention-in-large-language-models/)
+
+### Token Selection in Attention Mechanisms
+
+Token selection in attention mechanisms acts as a critical, learned, or implicit process where transformers identify and focus on the most contextually relevant tokens while ignoring irrelevant ones. By applying max-margin or thresholding criteria, attention enables efficient processing of long sequences, reduces over-smoothing, and improves performance by separating optimal tokens from non-optimal ones.
+
+#### Attention as a Token Selector
+
+**Multi-Token Attention (MTA):** Introduced by Meta, this method allows attention to process groups or sequences of tokens together rather than single pairs, improving contextual precision through convolutional structures.
+
+**Sparse Attention/Pruning:** Methods like Select and Pack Attention (SPA) filter out non-informative tokens to reduce computational costs while maintaining performance.
+
+**Thresholding/Ranking:** Using attention scores to rank and select the top-most relevant tokens, reducing the effective sequence length.
+
+#### Optimal Token Selection Techniques
+
+Token selection in LLM attention mechanisms optimizes performance by filtering relevant tokens, reducing computational costs, and improving long-context understanding.
+
+**Max-Margin Classification:** Attention mechanisms function as max-margin classifiers, where gradient descent converges to select the most relevant ("optimal") tokens while ignoring less relevant ones. This creates a natural separation between informative and uninformative tokens.
+
+**Attention Sink Technique:** StreamingLLM keeps the first few "sink tokens" to maintain model stability during infinite inference, ensuring low perplexity even with very long sequences. These initial tokens act as attention anchors.
+
+**OrthoRank:** A method to select tokens by measuring the speed at which hidden states move toward the attention sink, which helps capture key tokens more accurately by identifying structural importance in the sequence.
+
+**Multi-Token Attention (MTA):** Introduced by Meta, this method uses convolutional operations to analyze groups of tokens instead of pairs, improving the identification of long-range dependencies and reducing computational overhead.
+
+These techniques operate by identifying key-value pairs that maximize attention scores, often utilizing methods like StreamingLLM for cache management, OrthoRank for structural importance, or MTA for grouped token processing.
 
 ### Self-Attention in Transformers
 
