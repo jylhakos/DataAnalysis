@@ -137,7 +137,7 @@ Large Language Models (LLMs) are foundation models that can perform a wide range
    - $\vec{y}$ is the output vector
 
 4. **Prediction**: Generate probability distribution over vocabulary
-   $$P(\text{next\_token} | \text{context}) = \text{softmax}(\vec{z})$$
+   $$P(\text{next token} | \text{context}) = \text{softmax}(\vec{z})$$
 
 Every linear transformation within an LLM, from attention weights to embedding updates, can be described as a matrix acting on vectors. In an embedding space, eigenvectors represent the hidden axes along which transformations scale, and eigenvalues tell us how much the transformation scales that direction.
 
@@ -253,7 +253,7 @@ Where:
 
 ### Transformer Architecture
 
-![Transformer Architecture](transformer.png)
+![Transformer Architecture](transformers.png)
 *Source: [AWS - What are Transformers in Artificial Intelligence?](https://aws.amazon.com/what-is/transformers-in-artificial-intelligence/)*
 
 The transformer architecture consists of:
@@ -980,4 +980,3 @@ All referenced papers and resources belong to their respective authors and organ
 
 **Last Updated**: April 2026
 
-For questions or suggestions, please open an issue in the repository.
