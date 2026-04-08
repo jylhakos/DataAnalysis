@@ -213,7 +213,7 @@ Explore the examples in this repository to see machine learning techniques in ac
 - **Hypothesis**: Model comparison frameworks, hyperparameter tuning, and statistical hypothesis testing (McNemar's test, model selection)
 - **Monte Carlo**: Monte Carlo simulations and probabilistic modeling techniques
 - **Neural Networks**: Deep learning architectures and neural network implementations
-- **Probability**: Comprehensive probability theory examples including distributions, conditional probability, bias-variance tradeoff, and dataset analysis
+- **Probability**: Probability theory examples including distributions, conditional probability, bias-variance tradeoff, and dataset analysis
 - **Relations**: Vector database exploration with PostgreSQL pgvector, RAG (Retrieval-Augmented Generation) workflows, embeddings, and LLM integration using Docker
 - **Stochastic**: Deep dive into deterministic vs. stochastic processes, LLM randomness, the "Stochastic Parrots" debate, floating-point precision, and reproducibility in machine learning
 
