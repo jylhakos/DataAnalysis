@@ -7,7 +7,7 @@ Explore the samples in this repository to see machine learning techniques in act
 - **Bayesian**: Naive Bayes implementation for classification tasks
 - **Gradient Descent**: Optimization algorithms and training techniques
 - **Hypothesis**: Model comparison frameworks, hyperparameter tuning, and statistical hypothesis testing (McNemar's test, model selection)
-- **Machine Learning**: Comprehensive collection of supervised, unsupervised, and reinforcement learning algorithms with practical implementations
+- **Machine Learning**: A collection of supervised, unsupervised, and reinforcement learning algorithms with practical implementations
 - **Monte Carlo**: Monte Carlo simulations and probabilistic modeling techniques
 - **Neural Networks**: Deep learning architectures and neural network implementations
 - **Probability**: Probability theory examples including distributions, conditional probability, bias-variance tradeoff, and dataset analysis
