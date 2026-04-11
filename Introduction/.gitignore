@@ -1,0 +1,167 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+*.cover
+.cache
+nosetests.xml
+coverage.xml
+*.coveragerc
+
+# Logs
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# Output Files
+output/
+results/
+visualizations/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.pdf
+*.svg
+
+# Reports
+*.txt
+*.csv
+*.xlsx
+*.xls
+!requirements.txt
+!README*.txt
+!README*.md
+
+# Streamlit
+.streamlit/
+
+# Model Artifacts
+models/
+*.pkl
+*.h5
+*.model
+*.joblib
+
+# Data Files (exclude from Git, but keep sample data)
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# OS Files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Documentation Build
+docs/_build/
+docs/.doctrees/
+site/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# pytype
+.pytype/
+
+# Cython
+cython_debug/
+
+# Binary Files
+*.bin
+*.dat
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Compiled Files
+*.o
+*.a
+*.lib
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Large Files
+*.parquet
+*.feather
+*.hdf5
+*.h5
+
+# Secrets and Keys
+secrets/
+*.pem
+*.key
+*.cert
+*.crt

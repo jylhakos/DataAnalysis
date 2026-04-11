@@ -1,0 +1,54 @@
+date,product_category,product_name,region,customer_segment,sales_volume,revenue,cost,profit_margin
+2024-01-15,Electronics,Laptop Pro 15,North America,Enterprise,45,89550,58000,0.352
+2024-01-16,Electronics,Wireless Mouse,North America,Consumer,120,2400,1200,0.500
+2024-01-17,Furniture,Office Chair Deluxe,Europe,Enterprise,30,15000,9000,0.400
+2024-01-18,Electronics,Smartphone X,Asia,Consumer,85,42500,25500,0.400
+2024-01-19,Furniture,Standing Desk,North America,Enterprise,22,13200,7920,0.400
+2024-01-20,Office Supplies,Notebook Set,Europe,Consumer,200,2000,800,0.600
+2024-01-22,Electronics,Tablet Pro,Asia,Enterprise,55,38500,23100,0.400
+2024-01-23,Furniture,Bookshelf,North America,Consumer,18,5400,3240,0.400
+2024-01-24,Electronics,Wireless Keyboard,Europe,Consumer,95,4750,2375,0.500
+2024-01-25,Office Supplies,Pen Pack,Asia,Consumer,350,1750,700,0.600
+2024-01-26,Electronics,Monitor 27inch,North America,Enterprise,40,20000,12000,0.400
+2024-01-29,Furniture,Conference Table,Europe,Enterprise,8,12000,7200,0.400
+2024-01-30,Electronics,Headphones Pro,Asia,Consumer,110,11000,5500,0.500
+2024-02-01,Office Supplies,Paper Ream,North America,Consumer,400,2000,1000,0.500
+2024-02-02,Electronics,External SSD 1TB,Europe,Enterprise,60,12000,7200,0.400
+2024-02-05,Furniture,Filing Cabinet,Asia,Enterprise,25,7500,4500,0.400
+2024-02-06,Electronics,Webcam HD,North America,Consumer,75,5625,2812,0.500
+2024-02-07,Office Supplies,Stapler,Europe,Consumer,180,900,360,0.600
+2024-02-08,Electronics,USB-C Hub,Asia,Consumer,130,6500,3250,0.500
+2024-02-09,Furniture,Ergonomic Chair,North America,Enterprise,35,21000,12600,0.400
+2024-02-12,Electronics,Smart Watch,Europe,Consumer,65,19500,11700,0.400
+2024-02-13,Office Supplies,Sticky Notes,Asia,Consumer,280,1400,560,0.600
+2024-02-14,Electronics,Portable Charger,North America,Consumer,150,7500,3750,0.500
+2024-02-15,Furniture,Side Table,Europe,Consumer,42,4200,2520,0.400
+2024-02-16,Electronics,Bluetooth Speaker,Asia,Consumer,88,8800,4400,0.500
+2024-02-19,Office Supplies,Binder Set,North America,Consumer,220,3300,1320,0.600
+2024-02-20,Electronics,Gaming Mouse,Europe,Consumer,95,9500,4750,0.500
+2024-02-21,Furniture,Desk Lamp,Asia,Consumer,115,5750,2875,0.500
+2024-02-22,Electronics,Laptop Stand,North America,Enterprise,48,4800,2400,0.500
+2024-02-23,Office Supplies,Highlighter Pack,Europe,Consumer,310,1550,620,0.600
+2024-02-26,Electronics,Docking Station,Asia,Enterprise,32,16000,9600,0.400
+2024-02-27,Furniture,Storage Cabinet,North America,Enterprise,20,10000,6000,0.400
+2024-02-28,Electronics,Mechanical Keyboard,Europe,Consumer,70,10500,5250,0.500
+2024-03-01,Office Supplies,Folder Set,Asia,Consumer,265,1325,530,0.600
+2024-03-04,Electronics,4K Monitor,North America,Enterprise,28,28000,16800,0.400
+2024-03-05,Furniture,Lounge Chair,Europe,Consumer,15,7500,4500,0.400
+2024-03-06,Electronics,Graphics Tablet,Asia,Enterprise,38,19000,11400,0.400
+2024-03-07,Office Supplies,Calculator,North America,Consumer,145,2175,870,0.600
+2024-03-08,Electronics,Portable SSD,Europe,Consumer,82,16400,8200,0.500
+2024-03-11,Furniture,Whiteboard,Asia,Enterprise,18,5400,3240,0.400
+2024-03-12,Electronics,Ring Light,North America,Consumer,92,9200,4600,0.500
+2024-03-13,Office Supplies,Clipboard,Europe,Consumer,195,975,390,0.600
+2024-03-14,Electronics,Cable Organizer,Asia,Consumer,255,2550,1275,0.500
+2024-03-15,Furniture,Adjustable Desk,North America,Enterprise,26,15600,9360,0.400
+2024-03-18,Electronics,Power Strip,Europe,Consumer,175,3500,1750,0.500
+2024-03-19,Office Supplies,Label Maker,Asia,Consumer,88,4400,1760,0.600
+2024-03-20,Electronics,Laptop Bag,North America,Consumer,135,6750,3375,0.500
+2024-03-21,Furniture,Mobile Pedestal,Europe,Enterprise,22,6600,3960,0.400
+2024-03-22,Electronics,Screen Protector,Asia,Consumer,240,2400,1200,0.500
+2024-03-25,Office Supplies,Desk Organizer,North America,Consumer,168,3360,1344,0.600
+2024-03-26,Electronics,Microphone,Europe,Enterprise,45,13500,8100,0.400
+2024-03-27,Furniture,Bar Stool,Asia,Consumer,35,5250,3150,0.400
+2024-03-28,Electronics,Smart Hub,North America,Consumer,62,12400,6200,0.500
