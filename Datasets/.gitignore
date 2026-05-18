@@ -1,0 +1,75 @@
+# Python virtual environments
+venv/
+env/
+.env/
+.venv/
+ENV/
+
+# CSV data files
+*.csv
+
+# Python compiled files and caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Python distribution and packaging
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# Python installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environment markers
+pyvenv.cfg
+.python-version
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS-generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+*.out
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# pytest cache
+.pytest_cache/
+.cache/
+
+# mypy
+.mypy_cache/
