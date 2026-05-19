@@ -286,7 +286,7 @@ corr = df.corr()
 
 ### 4. Feature Selection
 
-Critical for unknown datasets because feature meanings are hidden and many variables may be irrelevant.
+Essential for unknown datasets because feature meanings are hidden and many variables may be irrelevant.
 
 | Method                        | Purpose                       |
 | ----------------------------- | ----------------------------- |
